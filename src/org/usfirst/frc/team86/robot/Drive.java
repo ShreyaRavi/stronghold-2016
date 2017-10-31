@@ -57,8 +57,6 @@ public class Drive extends RobotDrive {
 		// this is all fine for operator control
 		// for computer control, the front chosen shouldn't matter
 		switch(controlState) {
-		case AUTONOMOUS_CONTROL:
-			break;
 		case OP_CONTROL:
 			switch(frontState) {
 			case FRONT_A:
@@ -255,7 +253,6 @@ enum FrontState {
 }
 
 enum ControlState {
-	AUTONOMOUS_CONTROL,
 	OP_CONTROL,
 	COMP_CONTROL
 }

@@ -14,23 +14,14 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * directory.
  */
 public class Robot extends IterativeRobot {
-//    final String defaultAuto = "Default";
-//    final String customAuto = "My Auto";
-//    String autoSelected;
-//    SendableChooser chooser;
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
 	
 	Teleop teleop = new Teleop();
-	Autonomous auto = new Autonomous();
 	
     public void robotInit() {
-//        chooser = new SendableChooser();
-//        chooser.addDefault("Default Auto", defaultAuto);
-//        chooser.addObject("My Auto", customAuto);
-//        SmartDashboard.putData("Auto choices", chooser);
     	
     	IO.init();
     	
@@ -46,26 +37,12 @@ public class Robot extends IterativeRobot {
 	 * If using the SendableChooser make sure to add them to the chooser code above as well.
 	 */
     public void autonomousInit() {
-//    	autoSelected = (String) chooser.getSelected();
-////		autoSelected = SmartDashboard.getString("Auto Selector", defaultAuto);
-//		System.out.println("Auto selected: " + autoSelected);
-    	auto.init();
     }
 
     /**
      * This function is called periodically during autonomous
      */
     public void autonomousPeriodic() {
-//    	switch(autoSelected) {
-//    	case customAuto:
-//        //Put custom auto code here   
-//            break;
-//    	case defaultAuto:
-//    	default:
-//    	//Put default auto code here
-//            break;
-//    	}
-    	auto.update();
     }
 
     /**
